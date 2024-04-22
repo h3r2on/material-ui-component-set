@@ -10,7 +10,7 @@ export const TextInput = (
   const options = { ...(config.options || defaults) };
   const ref = config.ref ? { ...config.ref } : undefined;
 
-  const categories = [
+  const categories = config.optionCategories || [
     {
       label: 'Validation Options',
       expanded: false,

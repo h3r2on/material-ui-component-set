@@ -33,7 +33,12 @@ export const validation = {
   validationTooLong: variable('Value too long message', {
     value: ['This value is too long'],
   }),
-
+ 
+  maxWordCount: number('Max Word Count'),
+  validationExceedWordCount: variable('Maximum number of words reached message', {
+    value: ['This value contains too many words']
+  }),
+  
   autoComplete: toggle('Autocomplete', { value: false }),
   disabled: toggle('Disabled'),
   placeholder: variable('Placeholder'),

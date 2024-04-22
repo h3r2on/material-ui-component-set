@@ -1,4 +1,5 @@
 import {
+  number,
   hideIf,
   option,
   property,
@@ -9,7 +10,7 @@ import {
 } from '@betty-blocks/component-sdk';
 import { advanced } from '../../TextInput/options/advanced';
 import { styles } from '../../TextInput/options/styles';
-import { validation } from '../../TextInput/options/validation';
+import { validation } from './validation';
 
 export const options = {
   actionVariableId: option('ACTION_JS_VARIABLE', {
@@ -33,13 +34,12 @@ export const options = {
   label: variable('Label', { value: [''] }),
   value: variable('Value', { value: [''] }),
 
-  ...validation,
-
   multiline: toggle('Multiline', { value: true }),
   rows: text('Rows', {
     value: '4',
   }),
 
+  ...validation,
   ...styles,
   ...advanced,
 };
